@@ -1,0 +1,13 @@
+{% if product %}
+  <h2>{{product.name}} - {{product.price}}тг</h2>
+  <form action={% url 'product_detail' product.id %} method="POST">
+    {% csrf_token %}
+    <input type="text" class="input" name="name" placeholder="product
+     name"/>
+    <input type="text" class="input" name="price" placeholder="price"/>
+    <input type="submit" class="submit" value="Edit"/>
+  </form>
+  <form action={% url 'delete' prod_id=product.id %} method="DELETE">
+    <input type="submit" class="submit" value="Delete"/>
+  </form>
+{% endif %}

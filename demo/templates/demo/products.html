@@ -1,0 +1,20 @@
+<h2>Products</h2>
+{% if products %}
+<ul>
+  {% for p in products %}
+      <li><a href={% url 'product_detail' p.id %} >{{p.name}}</a></li>
+  {% endfor %}
+  {% else %}
+      <p>No products yet.</p>
+  {% endif %}
+  <br>
+  <hr>
+  <h4>Добавить новый продукт в эту категорию</h4>
+  <form action={% url 'category_detail' c_id %} method="POST">
+      {% csrf_token %}
+      <input type="text" class="input" name="name" placeholder="product
+       name"/>
+      <input type="text" class="input" name="price" placeholder="price"/>
+      <input type="submit" class="submit" value="Add"/>
+    </form>
+<ul>

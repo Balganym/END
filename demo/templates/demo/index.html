@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body class="contacts">
+  <div class="contactsBody">
+    <h1>Store</h1>
+    {% if categories %}
+      <ul>
+      {% for c in categories %}
+      <li>
+          <a href={% url 'category_detail' c.id %}>
+            {{ c.name }}
+          </a>
+      </li>
+          <hr/>
+      {% endfor %}
+      </ul>
+    {% else %}
+        <p>No categories yet.</p>
+    {% endif %}
+
+  </div>
+   
+</body>
+</html>
