@@ -1,0 +1,151 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+.todo{
+  height: 100%;
+  width: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2015/06/08/15/11/typewriter-801921_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 100%;
+}
+
+.todo .todoBody{
+  width: 60%;
+  margin: 40px auto;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.todo .todoBody h1{
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+}
+
+.todo .todoBody li{
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo .input{
+  width: 80%;
+  height: 26px;
+  border: none;
+  background-color: #000;
+  color: rgba(255,255,255,0.8);
+  font-size: 1em;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.todo .submit{
+  width: 18%; 
+  font-size: 1.2em;
+  border: none;
+  background-color: #000;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+}
+
+.contacts{
+  height: 100%;
+  width: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2018/04/14/02/40/pencil-3318160_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 100%;
+}
+
+.contacts .contactsBody{
+  width: 60%;
+  margin: 40px auto;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contacts .contactsBody h1{
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+}
+
+.contacts .contactsBody li{
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts .input{
+  width: 40%;
+  height: 26px;
+  border: none;
+  background-color: #000;
+  color: rgba(255,255,255,0.8);
+  font-size: 1em;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.contacts .submit{
+  width: 18%; 
+  font-size: 1.2em;
+  border: none;
+  background-color: #000;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+}
+
+.index{
+  height: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2018/04/06/23/22/notebook-3297317_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 100%;
+  padding-top: 25%;
+}
+
+.lg-btn{
+  width: 50%;
+  padding: 20px 80px;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.index a{
+  text-decoration: none;
+  font-size: 3em;
+  color: #fff;
+}

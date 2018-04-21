@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="todo">
+
+  <div class="todoBody">
+    <h1>Todo list</h1>
+    <form action={% url 'addTask' %} method="POST">
+      <input type="text" class="input" name="task" placeholder="todo..."/>
+      <input type="hidden" value="False" name="status" />
+      <input type="submit" class="submit" value="submit"/>
+    </form>
+    {% if todos %}
+      <ul>
+      {% for t in todos %}
+          <li>
+            {{ t.task }}
+            <a href={% url 'check' task_id=t.id %}>done</a>
+          </li>
+          <hr/>
+      {% endfor %}
+      </ul>
+    {% else %}
+        <p>No task for today.</p>
+    {% endif %}
+
+    <h1>Already done tasks</h1>
+    {% if done %}
+        <ul>
+        {% for d in done %}
+            <li>{{ d.task }}</li>
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No done task</p>
+    {% endif %} 
+  </div>
+   
+</body>
+</html>

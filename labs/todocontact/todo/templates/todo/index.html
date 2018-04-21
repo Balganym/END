@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="index">
+  <div class="lg-btn">
+    <div><a href={% url 'contacts' %}>Contact list</a></div>
+    <div><a href={% url 'todo' %}>Todo list</a></div>
+  </div>
+</body>
+</html>
